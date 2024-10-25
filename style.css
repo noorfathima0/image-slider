@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Slider Container */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Slider */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Slider Images */
+  .slider-image {
+    min-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Previous and Next Buttons */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Control Panel for Automate Button */
+  .control-panel {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .auto-slide-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auto-slide-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design for Larger Screens */
+  @media (min-width: 768px) {
+    body {
+      height: 100vh;
+    }
+  
+    .slider-container {
+      max-width: 800px;
+    }
+  
+    .prev, .next {
+      width: 50px;
+      padding: 15px;
+    }
+  
+    .auto-slide-btn {
+      font-size: 18px;
+    }
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 480px) {
+    .slider-container {
+      max-width: 100%;
+      margin: 10px;
+    }
+  
+    .prev, .next {
+      width: 30px;
+      padding: 8px;
+    }
+  
+    .auto-slide-btn {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
